@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/topMoviesImageViewNPN"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+
+        <TextView
+            android:id="@+id/txtMovieNameNP"
+            android:layout_width="350dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/imageButton2"
+            android:fontFamily="@font/alata"
+            android:text="Dune"
+            android:paddingLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/starNP"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/imgShadow"
+                android:background="@drawable/star"
+                android:scaleType="fitXY"
+                android:src="@drawable/star"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txtIMDBNP"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/txtMovieTitle"
+                android:fontFamily="@font/droid_sans"
+                android:text="Time Genre Year"
+                android:textColor="#BCB7BD"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtTimeNP"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/txtMovieTitle"
+                android:fontFamily="@font/droid_sans"
+                android:text="Time Genre Year"
+                android:textColor="#BCB7BD"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtIdNotVisibleNP"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/txtMovieTitle"
+            android:fontFamily="@font/droid_sans"
+            android:text="Time Genre Year"
+            android:textColor="#BCB7BD"
+            android:textSize="18dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_bookTicketNP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF1744"
+            android:text="Book Tickets"
+            android:background="@drawable/button_rectangle"
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
+    </LinearLayout>
+
+</LinearLayout>

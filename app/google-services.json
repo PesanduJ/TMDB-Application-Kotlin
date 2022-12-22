@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "403476977902",
+    "firebase_url": "https://book-my-show-5ee9b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "book-my-show-5ee9b",
+    "storage_bucket": "book-my-show-5ee9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403476977902:android:f37a6a1594e4d4582f3bff",
+        "android_client_info": {
+          "package_name": "com.example.tmdbapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403476977902-mnbvd3qsmu26v55aild4qar8sek8i5o5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcEbVBJSrAGgxRoKjTmYyVmM9jNyD1Za0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403476977902-mnbvd3qsmu26v55aild4qar8sek8i5o5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    android:orientation="vertical"
+    tools:context=".Movies">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgound"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="154dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Choose Movie"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/searchMovie"
+                    android:layout_width="260dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:hint="Search"
+                    android:textColorHint="#B7B6B6"
+                    android:background="@drawable/edittext_bg"
+                    android:textSize="25dp"
+                    android:paddingLeft="30dp"
+                    android:foreground="@drawable/ic_baseline_search_24"
+                    android:foregroundGravity="left|center"
+                    android:textColor="@color/white"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginBottom="-3dp"
+                    android:backgroundTint="#A64B4B"
+                    android:text="Search" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="154dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="271dp"
+                android:fontFamily="@font/actor"
+                android:textAlignment="textStart"
+                android:text="Now Playing"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nowplayingRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_above="@+id/btm_navigation"
+                android:layout_marginTop="-15dp" />
+
+            <TextView
+                android:layout_width="154dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="271dp"
+                android:fontFamily="@font/actor"
+                android:text="Top Picks"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movieRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_above="@+id/btm_navigation"
+                android:layout_marginTop="-15dp" />
+
+            <TextView
+                android:layout_width="154dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="271dp"
+                android:fontFamily="@font/actor"
+                android:textAlignment="textStart"
+                android:text="Now Playing"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/noplayingRecycler1"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_above="@+id/btm_navigation"
+                android:layout_marginTop="-15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_corners"
+        app:itemIconTint="@color/icons_color"
+        app:itemRippleColor="@color/white"
+        app:menu="@menu/navigation_items">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

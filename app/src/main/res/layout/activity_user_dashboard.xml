@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20252E"
+    android:orientation="vertical"
+    tools:context=".UserDashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/backgound">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/hello"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, John"
+                    android:textSize="25dp"
+                    android:textColor="?android:attr/windowBackground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="There are so many movies showing now"
+                    android:textSize="13dp"
+                    android:textColor="?android:attr/windowBackground"/>
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userProfileIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="60dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_profile_icon"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:strokeWidth="3dp"
+                app:strokeColor="@color/white"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtUserSearchMovie"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/user_search_border"
+                android:foreground="@drawable/ic_baseline_search_24"
+                android:foregroundGravity="left|center"
+                android:hint="What do you want to see"
+                android:inputType="textPersonName"
+                android:paddingLeft="30dp"
+                android:textColor="@color/white"
+                android:textColorHint="#B7B6B6"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btnUserSearchMovie"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="21dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:foreground="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:foregroundTint="#36313C" />
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Now Premiering"
+                    android:textSize="25dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/userNowPremieringRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:layout_above="@+id/btm_navigation"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Movies"
+                    android:textSize="25dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/userTopMoviesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:layout_above="@+id/btm_navigation"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_corners"
+        app:itemIconTint="@color/icons_color"
+        app:itemRippleColor="@color/white"
+        app:menu="@menu/navigation_items">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>
