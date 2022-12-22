@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style android:name="Circular">
-        <item android:name="cornerSize">50%</item>
+        <item android:name="cornerSize"
+            tools:ignore="ExtraText">50%</item>
     </style>
 
 </resources>
