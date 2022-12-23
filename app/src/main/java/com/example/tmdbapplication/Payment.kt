@@ -39,6 +39,7 @@ class Payment : AppCompatActivity() {
         val seatArray =
             myintentReceive.getSerializableExtra("SelectedBookingDataSeats") as ArrayList<String>?
         var NOS = myintentReceive.getStringExtra("SelectedBookingDataNOS")
+        var movieIdDate = "$mid"+bookDate.toString()
 
         bookedDate.text = "Date : " + bookDate.toString()
         seatNames.text = "Seats : " + seatArray.toString()
@@ -50,9 +51,9 @@ class Payment : AppCompatActivity() {
         btn_pay.setOnClickListener() {
 
             database = FirebaseDatabase.getInstance().getReference("Reservation")
-            val Booking = Booking(id.toString(), bookDate, mid, seatArray)
+            val Booking = Booking(id.toString(), bookDate, mid, seatArray,movieIdDate)
 
-            database.push().setValue(Booking(id.toString(), bookDate, mid, seatArray)).addOnSuccessListener {
+            database.push().setValue(Booking(id.toString(), bookDate, mid, seatArray,movieIdDate)).addOnSuccessListener {
                 Toast.makeText(applicationContext, "Booking Successfull!!", Toast.LENGTH_SHORT)
                     .show()
             }.addOnFailureListener {

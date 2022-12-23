@@ -21,7 +21,7 @@ class BookSeat : AppCompatActivity() {
 
         var test: TextView = findViewById(R.id.test)
         var btn_buyTickets: Button = findViewById(R.id.btn_BookSeat)
-        var calendarView: CalendarView = findViewById(R.id.calendarView)
+        var movieDate: CalendarView = findViewById(R.id.calendarView)
 
 
         var r1s1: ToggleButton = findViewById(R.id.r1seat1)
@@ -840,19 +840,14 @@ class BookSeat : AppCompatActivity() {
 
         test.text = counter.toString()
         var Date: String = ""
-        calendarView
-            .setOnDateChangeListener(
-                CalendarView.OnDateChangeListener { view, year, month, dayOfMonth ->
 
-                    val Date = (dayOfMonth.toString() + "-"
-                            + (month + 1) + "-" + year)
-
-                    checkSeats(Date)
-                })
-
+        movieDate.setOnDateChangeListener { view, year, month, dayOfMonth ->
+            Date = (dayOfMonth.toString() + "-"
+                    + (month + 1) + "-" + year)
+            checkSeats(Date)
+        }
 
         btn_buyTickets.setOnClickListener() {
-
 
             if (r1s1.text == "" && r1s2.text == "" && r1s3.text == "" && r1s4.text == "" && r1s5.text == "" && r1s6.text == "" &&
                 r2s1.text == "" && r2s2.text == "" && r2s3.text == "" && r2s4.text == "" && r2s5.text == "" && r2s6.text == "" && r2s7.text == "" && r2s8.text == "" &&
@@ -861,11 +856,8 @@ class BookSeat : AppCompatActivity() {
                 r5s1.text == "" && r5s2.text == "" && r5s3.text == "" && r5s4.text == "" && r5s5.text == "" && r5s6.text == "" && r5s7.text == "" && r5s8.text == "" && r5s9.text == "" &&
                 r6s1.text == "" && r6s2.text == "" && r6s3.text == "" && r6s4.text == "" && r6s5.text == "" && r6s6.text == "" && r6s7.text == "" && r6s8.text == "" && r6s9.text == ""
             ) {
-
-                Toast.makeText(applicationContext, "Please select your seats!", Toast.LENGTH_SHORT)
-                    .show()
-
-            } else {
+                Toast.makeText(applicationContext, "Please select your seats!", Toast.LENGTH_SHORT).show()
+            }else {
 
                 var id: Int = 0
                 var bookDate = Date.toString()
@@ -898,20 +890,19 @@ class BookSeat : AppCompatActivity() {
     }
 
     fun checkSeats(Date: String) {
-        try {
 
             var userId: String = ""
             var date: String = ""
             var movieId: String = ""
             var seats: String = ""
 
-
             var myintent = intent
             var mid = myintent.getStringExtra("ID")
 
             firebase = FirebaseDatabase.getInstance()
             database = firebase.getReference("Reservation")
-            var query: Query = database.orderByChild("date").equalTo("$Date")
+            //var query: Query = database.orderByChild("date").equalTo("$Date")
+            var query:Query =database.orderByChild("movieIdDate").equalTo("$mid"+ Date.toString())
             query.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
@@ -939,9 +930,7 @@ class BookSeat : AppCompatActivity() {
                 }
             })
 
-        } catch (e: IndexOutOfBoundsException) {
 
-        }
 
     }
 
@@ -1021,6 +1010,30 @@ class BookSeat : AppCompatActivity() {
             true -> r4s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
 
             false -> r4s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s1")) {
+
+            true -> r6s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+
+            false -> r6s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s2")) {
+
+            true -> r6s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+
+            false -> r6s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
 
             else -> {
                 Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
