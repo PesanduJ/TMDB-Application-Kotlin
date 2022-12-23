@@ -6,6 +6,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.firebase.database.*
+import kotlin.collections.Map.Entry
 
 
 class BookSeat : AppCompatActivity() {
@@ -85,10 +86,7 @@ class BookSeat : AppCompatActivity() {
         var myintent = intent
         var mid = myintent.getStringExtra("ID")
 
-        //Toast.makeText(applicationContext,"${mid.toString()}", Toast.LENGTH_SHORT).show()
-
         var seatArray = ArrayList<String>()
-
 
 //*****************************************************************************************************************************************
 
@@ -844,6 +842,115 @@ class BookSeat : AppCompatActivity() {
         movieDate.setOnDateChangeListener { view, year, month, dayOfMonth ->
             Date = (dayOfMonth.toString() + "-"
                     + (month + 1) + "-" + year)
+
+            r1s1.isEnabled=true
+            r1s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r1s2.isEnabled=true
+            r1s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r1s3.isEnabled=true
+            r1s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r1s4.isEnabled=true
+            r1s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r1s5.isEnabled=true
+            r1s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r1s6.isEnabled=true
+            r1s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+
+            r2s1.isEnabled=true
+            r2s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r2s2.isEnabled=true
+            r2s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r2s3.isEnabled=true
+            r2s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r2s4.isEnabled=true
+            r2s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r2s5.isEnabled=true
+            r2s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r2s6.isEnabled=true
+            r2s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r2s7.isEnabled=true
+            r2s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r2s8.isEnabled=true
+            r2s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+
+            r3s1.isEnabled=true
+            r3s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r3s2.isEnabled=true
+            r3s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r3s3.isEnabled=true
+            r3s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r3s4.isEnabled=true
+            r3s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r3s5.isEnabled=true
+            r3s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r3s6.isEnabled=true
+            r3s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r3s7.isEnabled=true
+            r3s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r3s8.isEnabled=true
+            r3s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+
+            r4s1.isEnabled=true
+            r4s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s2.isEnabled=true
+            r4s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s3.isEnabled=true
+            r4s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s4.isEnabled=true
+            r4s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s5.isEnabled=true
+            r4s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s6.isEnabled=true
+            r4s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s7.isEnabled=true
+            r4s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s8.isEnabled=true
+            r4s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r4s9.isEnabled=true
+            r4s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            r5s1.isEnabled=true
+            r5s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s2.isEnabled=true
+            r5s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s3.isEnabled=true
+            r5s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s4.isEnabled=true
+            r5s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s5.isEnabled=true
+            r5s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s6.isEnabled=true
+            r5s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s7.isEnabled=true
+            r5s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s8.isEnabled=true
+            r5s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r5s9.isEnabled=true
+            r5s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+
+            r6s1.isEnabled=true
+            r6s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s2.isEnabled=true
+            r6s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s3.isEnabled=true
+            r6s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s4.isEnabled=true
+            r6s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s5.isEnabled=true
+            r6s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s6.isEnabled=true
+            r6s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s7.isEnabled=true
+            r6s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s8.isEnabled=true
+            r6s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+            r6s9.isEnabled=true
+            r6s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
             checkSeats(Date)
         }
 
@@ -896,12 +1003,14 @@ class BookSeat : AppCompatActivity() {
             var movieId: String = ""
             var seats: String = ""
 
+            var bookedSeats = arrayListOf<String>()
+
+
             var myintent = intent
             var mid = myintent.getStringExtra("ID")
 
             firebase = FirebaseDatabase.getInstance()
             database = firebase.getReference("Reservation")
-            //var query: Query = database.orderByChild("date").equalTo("$Date")
             var query:Query =database.orderByChild("movieIdDate").equalTo("$mid"+ Date.toString())
             query.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -916,22 +1025,21 @@ class BookSeat : AppCompatActivity() {
                             date = data.date.toString()
                             movieId = data.movieId.toString()
                             seats = data.seats.toString()
+                            bookedSeats.add(data.seats.toString())
                         }
 
-                        blockSeats(seats)
+                        blockSeats(bookedSeats.toString())
 
                         var test1: TextView = findViewById(R.id.test1)
-                        test1.setText("$seats")
+                        test1.setText("${bookedSeats.toString()}")
                     }
                 }
+
 
                 override fun onCancelled(error: DatabaseError) {
                     TODO("Not yet implemented")
                 }
             })
-
-
-
     }
 
 
@@ -993,9 +1101,365 @@ class BookSeat : AppCompatActivity() {
         var r6s8: ToggleButton = findViewById(R.id.r6seat8)
         var r6s9: ToggleButton = findViewById(R.id.r6seat9)
 
+        //---------------Row 1--------------------------------------------------------------------------------------------------
+        when (seats.contains("r1s1")) {
+
+            true -> {r1s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r1s1.isEnabled = false}
+
+            false -> r1s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r1s2")) {
+
+            true -> {r1s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r1s2.isEnabled = false}
+
+            false -> r1s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r1s3")) {
+
+            true -> {r1s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r1s3.isEnabled = false}
+
+            false -> r1s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r1s4")) {
+
+            true -> {r1s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r1s4.isEnabled = false}
+
+            false -> r1s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r1s5")) {
+
+            true -> {r1s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r1s5.isEnabled = false}
+
+            false -> r1s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r1s6")) {
+
+            true -> {r1s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r1s6.isEnabled = false}
+
+            false -> r1s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        //---------------Row 2--------------------------------------------------------------------------------------------------
+        when (seats.contains("r2s1")) {
+
+            true -> {r2s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s1.isEnabled = false}
+
+            false -> r2s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r2s2")) {
+
+            true -> {r2s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s2.isEnabled = false}
+
+            false -> r2s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r2s3")) {
+
+            true -> {r2s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s3.isEnabled = false}
+
+            false -> r2s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r2s4")) {
+
+            true -> {r2s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s4.isEnabled = false}
+
+            false -> r2s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r2s5")) {
+
+            true -> {r2s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s5.isEnabled = false}
+
+            false -> r2s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r2s6")) {
+
+            true -> {r2s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s6.isEnabled = false}
+
+            false -> r2s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r2s7")) {
+
+            true -> {r2s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s7.isEnabled = false}
+
+            false -> r2s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r2s8")) {
+
+            true -> {r2s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r2s8.isEnabled = false}
+
+            false -> r2s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        //---------------Row 3--------------------------------------------------------------------------------------------------
+        when (seats.contains("r3s1")) {
+
+            true -> {r3s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s1.isEnabled = false}
+
+            false -> r3s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r3s2")) {
+
+            true -> {r3s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s2.isEnabled = false}
+
+            false -> r3s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r3s3")) {
+
+            true -> {r3s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s3.isEnabled = false}
+
+            false -> r3s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r3s4")) {
+
+            true -> {r3s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s4.isEnabled = false}
+
+            false -> r3s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r3s5")) {
+
+            true -> {r3s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s5.isEnabled = false}
+
+            false -> r3s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r3s6")) {
+
+            true -> {r3s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s6.isEnabled = false}
+
+            false -> r3s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r3s7")) {
+
+            true -> {r3s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s7.isEnabled = false}
+
+            false -> r3s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r3s8")) {
+
+            true -> {r3s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r3s8.isEnabled = false}
+
+            false -> r3s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        //---------------Row 4--------------------------------------------------------------------------------------------------
+        when (seats.contains("r4s1")) {
+
+            true -> {r4s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s1.isEnabled = false}
+
+            false -> r4s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r4s2")) {
+
+            true -> {r4s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s2.isEnabled = false}
+
+            false -> r4s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r4s3")) {
+
+            true -> {r4s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s3.isEnabled = false}
+
+            false -> r4s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r4s4")) {
+
+            true -> {r4s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s4.isEnabled = false}
+
+            false -> r4s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r4s5")) {
+
+            true -> {r4s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s5.isEnabled = false}
+
+            false -> r4s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
         when (seats.contains("r4s6")) {
 
-            true -> r4s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+            true -> {r4s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s6.isEnabled = false}
 
             false -> r4s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
 
@@ -1007,7 +1471,8 @@ class BookSeat : AppCompatActivity() {
 
         when (seats.contains("r4s7")) {
 
-            true -> r4s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+            true -> {r4s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s7.isEnabled = false}
 
             false -> r4s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
 
@@ -1017,9 +1482,156 @@ class BookSeat : AppCompatActivity() {
             }
         }
 
+        when (seats.contains("r4s8")) {
+
+            true -> {r4s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s8.isEnabled = false}
+
+            false -> r4s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r4s9")) {
+
+            true -> {r4s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r4s9.isEnabled = false}
+
+            false -> r4s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+
+        //---------------Row 5--------------------------------------------------------------------------------------------------
+        when (seats.contains("r5s1")) {
+
+            true -> {r5s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s1.isEnabled = false}
+
+            false -> r5s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s2")) {
+
+            true -> {r5s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s2.isEnabled = false}
+
+            false -> r5s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s3")) {
+
+            true -> {r5s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s3.isEnabled = false}
+
+            false -> r5s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s4")) {
+
+            true -> {r5s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s4.isEnabled = false}
+
+            false -> r5s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s5")) {
+
+            true -> {r5s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s5.isEnabled = false}
+
+            false -> r5s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s6")) {
+
+            true -> {r5s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s6.isEnabled = false}
+
+            false -> r5s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s7")) {
+
+            true -> {r5s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s7.isEnabled = false}
+
+            false -> r5s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s8")) {
+
+            true -> {r5s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s8.isEnabled = false}
+
+            false -> r5s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r5s9")) {
+
+            true -> {r5s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r5s9.isEnabled = false}
+
+            false -> r5s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        //---------------Row 6--------------------------------------------------------------------------------------------------
         when (seats.contains("r6s1")) {
 
-            true -> r6s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+            true -> {r6s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s1.isEnabled = false}
 
             false -> r6s1.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
 
@@ -1031,9 +1643,101 @@ class BookSeat : AppCompatActivity() {
 
         when (seats.contains("r6s2")) {
 
-            true -> r6s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+            true -> {r6s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s2.isEnabled = false}
 
             false -> r6s2.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s3")) {
+
+            true -> {r6s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s3.isEnabled = false}
+
+            false -> r6s3.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s4")) {
+
+            true -> {r6s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s4.isEnabled = false}
+
+            false -> r6s4.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s5")) {
+
+            true -> {r6s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s5.isEnabled = false}
+
+            false -> r6s5.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s6")) {
+
+            true -> {r6s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s6.isEnabled = false}
+
+            false -> r6s6.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s7")) {
+
+            true -> {r6s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s7.isEnabled = false}
+
+            false -> r6s7.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s8")) {
+
+            true -> {r6s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s8.isEnabled = false}
+
+            false -> r6s8.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        when (seats.contains("r6s9")) {
+
+            true -> {r6s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.booked_seat_bg)
+                r6s9.isEnabled = false}
+
+            false -> r6s9.background = ContextCompat.getDrawable(applicationContext, R.drawable.seat_bg)
 
             else -> {
                 Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
@@ -1044,5 +1748,66 @@ class BookSeat : AppCompatActivity() {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    fun checkSeats(Date: String) {
+
+            var userId: String = ""
+            var date: String = ""
+            var movieId: String = ""
+            var seats: String = ""
+
+
+            var myintent = intent
+            var mid = myintent.getStringExtra("ID")
+
+            firebase = FirebaseDatabase.getInstance()
+            database = firebase.getReference("Reservation")
+            //var query: Query = database.orderByChild("date").equalTo("$Date")
+            var query:Query =database.orderByChild("movieIdDate").equalTo("$mid"+ Date.toString())
+            query.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+
+                        for (snapshot in snapshot.children) {
+                            snapshot.getValue(Booking::class.java)?.let { bookedInfo.add(it) }
+                        }
+
+                        for (data in bookedInfo) {
+                            userId = data.userId.toString()
+                            date = data.date.toString()
+                            movieId = data.movieId.toString()
+                            seats = data.seats.toString()
+                        }
+
+                        blockSeats(seats)
+
+                        var test1: TextView = findViewById(R.id.test1)
+                        test1.setText("$seats")
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
+    }
+    */
 }
 

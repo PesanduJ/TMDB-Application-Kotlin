@@ -632,7 +632,7 @@
                 android:text="HI"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:visibility="visible"/>
+                android:visibility="invisible"/>
         </LinearLayout>
     </ScrollView>
 
