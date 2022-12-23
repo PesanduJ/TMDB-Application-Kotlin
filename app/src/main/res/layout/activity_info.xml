@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#13171E"
+    android:background="#202B40"
     tools:context=".Info">
 
     <androidx.cardview.widget.CardView
@@ -42,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@drawable/fade_bg"
             tools:layout_editor_absoluteX="-85dp"
             tools:layout_editor_absoluteY="-16dp">
 

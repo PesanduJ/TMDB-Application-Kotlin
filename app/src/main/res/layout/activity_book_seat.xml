@@ -621,7 +621,8 @@
                 android:layout_gravity="center"
                 android:text="HI"
                 android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/test1"
@@ -630,7 +631,8 @@
                 android:layout_gravity="center"
                 android:text="HI"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="invisible"/>
         </LinearLayout>
     </ScrollView>
 
