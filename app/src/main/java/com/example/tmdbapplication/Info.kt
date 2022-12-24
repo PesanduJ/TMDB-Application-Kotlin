@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.StrictMode
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,7 +14,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
@@ -22,7 +22,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.example.tmdbapplication.databinding.ActivityInfoBinding
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -37,7 +36,6 @@ import java.net.URL
 
 class Info : AppCompatActivity() {
 
-    private lateinit var binding: ActivityInfoBinding
     private lateinit var database: DatabaseReference
 
     lateinit var castRecycle: RecyclerView   //you are not even declaring them only referring when you are using them
@@ -49,6 +47,10 @@ class Info : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
+
+        //remove 'android.os.NetworkOnMainThreadException' restriction and you override the default behavior
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
 
         var myintent = intent
         var mid = myintent.getStringExtra("MovieID")
@@ -67,11 +69,18 @@ class Info : AppCompatActivity() {
 //            }
 //        })
 
-        lifecycleScope.launchWhenCreated {
-            withContext(Dispatchers.IO) {
+        Thread(Runnable {
+
+            this@Info.runOnUiThread(java.lang.Runnable {
                 getMovieInfo(mid.toString())
-            }
-        }
+            })
+        }).start()
+
+//        lifecycleScope.launchWhenCreated {
+//            withContext(Dispatchers.IO) {
+//                getMovieInfo(mid.toString())
+//            }
+//        }
 
         //do this
         castRecycle = findViewById(R.id.castRecycler)
@@ -149,12 +158,17 @@ class Info : AppCompatActivity() {
 
 
         //publishing data
-        txtMovieTitle.text = original_title
-        txtRating.text = rating.toString().take(3)
-        txtTimeGenreYear.text = "•" + convertTime(runtime) + "  •" + release_date.take(4)
-        txtDescription.text = overview
-        idHideText.text = idHide
-        posterHideText.text = posterHide
+        val uiHandler2 = Handler(Looper.getMainLooper())
+        uiHandler2.post(Runnable {
+            txtMovieTitle.text = original_title
+            txtRating.text = rating.toString().take(3)
+            txtTimeGenreYear.text = "•" + convertTime(runtime) + "  •" + release_date.take(4)
+            txtDescription.text = overview
+            idHideText.text = idHide
+            posterHideText.text = posterHide
+        })
+
+
 
 
         //using picasso

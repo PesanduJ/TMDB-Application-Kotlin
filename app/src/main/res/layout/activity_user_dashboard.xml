@@ -54,7 +54,7 @@
                 android:src="@drawable/user_profile_icon"
                 app:shapeAppearanceOverlay="@style/Circular"
                 app:strokeWidth="3dp"
-                app:strokeColor="@color/white"/>
+                app:strokeColor="#00303032"/>
 
         </LinearLayout>
 

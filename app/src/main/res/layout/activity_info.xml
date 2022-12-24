@@ -72,8 +72,8 @@
 
             <TextView
                 android:id="@+id/txtMovieTitle"
-                android:layout_width="356dp"
-                android:layout_height="49dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/imageButton2"
@@ -98,7 +98,7 @@
             <TextView
                 android:id="@+id/txtDescription"
                 android:layout_width="355dp"
-                android:layout_height="157dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/txtTimeGenreYear"
