@@ -82,19 +82,60 @@
             android:layout_gravity="center"
             android:src="@drawable/tear_line" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <ToggleButton
-            android:id="@+id/razorPay"
-            android:layout_width="140dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="15dp"
-            android:foreground="@drawable/razorpay"
-            android:background="@color/white"
-            android:textColor="#00000000"
-            android:textOff=""
-            android:textOn="•"
-            android:layout_marginTop="15dp"
-            app:shapeAppearanceOverlay="@style/RoundedSquare" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/razorPay"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textColor="#FFFEFE"
+                android:hint="Razorpay"
+                android:textOff=""
+                android:textOn="•"
+                android:layout_marginTop="15dp"
+                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+            <ToggleButton
+                android:id="@+id/googlePay"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textColor="#FFFEFE"
+                android:hint="Google Pay"
+                android:textOff=""
+                android:textOn="•"
+                android:layout_marginTop="15dp"
+                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+            <ToggleButton
+                android:id="@+id/paypal"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textColor="#FFFEFE"
+                android:hint="Paypal"
+                android:textOff=""
+                android:textOn="•"
+                android:layout_marginTop="15dp"
+                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
 
         <Button
             android:id="@+id/btn_pay"

@@ -19,7 +19,7 @@ class Database : AppCompatActivity() {
 
         movieRecyclerView = findViewById(R.id.nowshowingRecyclerView)
         movieRecyclerView.layoutManager = LinearLayoutManager(applicationContext,
-            LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager.VERTICAL, false)
         movieRecyclerView.setHasFixedSize(true)
 
         movieArrayList = arrayListOf<Movie>()

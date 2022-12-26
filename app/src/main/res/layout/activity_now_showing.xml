@@ -19,13 +19,13 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:text="Update the movies now playing..."
-            android:textColor="#8C8B8B"
+            android:textColor="#F8F8F8"
             android:textSize="25dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/nowshowingRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="676dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="15dp" />
 
 

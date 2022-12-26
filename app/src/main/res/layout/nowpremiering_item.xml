@@ -21,13 +21,15 @@
 
         <TextView
             android:id="@+id/txtMovieNameNP"
-            android:layout_width="350dp"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_toEndOf="@+id/imageButton2"
             android:fontFamily="@font/alata"
             android:paddingLeft="10dp"
-            android:text="Dune"
+            android:text="Pocahontal II: Journey to a New World"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -35,6 +37,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="horizontal">
 
 
@@ -52,7 +55,7 @@
 
             <TextView
                 android:id="@+id/txtIMDBNP"
-                android:layout_width="141dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
@@ -64,16 +67,18 @@
 
             <TextView
                 android:id="@+id/txtTimeNP"
-                android:layout_width="141dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/txtMovieTitle"
                 android:fontFamily="@font/droid_sans"
                 android:text="Time Genre Year"
                 android:textColor="#BCB7BD"
                 android:textSize="18dp" />
+
         </LinearLayout>
+
 
 
         <TextView
