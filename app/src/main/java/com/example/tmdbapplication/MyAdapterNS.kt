@@ -43,12 +43,6 @@ class MyAdapterNS(private val movieList:ArrayList<Movie>) : RecyclerView.Adapter
                 .into(holder.poster)
         })
 
-//        holder.removeShow.setOnClickListener(){
-//            var inte = Intent(holder.itemView.context,Movies::class.java)
-//            holder.itemView.context.startActivity(inte)
-//            Toast.makeText(holder.itemView.context,"${holder.id.text}",Toast.LENGTH_SHORT).show()
-//        }
-
         holder.removeShow.setOnClickListener(){
             removeMovieData(holder.id.text.toString(), holder.itemView)
         }

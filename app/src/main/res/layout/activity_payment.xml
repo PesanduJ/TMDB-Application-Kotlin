@@ -7,20 +7,42 @@
     android:background="#20252E"
     tools:context=".Payment">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="301dp">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/fade_bg"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pay for tickets"
-            android:textSize="25dp"
-            android:textColor="@color/white"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/testbg" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgShadow"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@drawable/shadow_effect" />
+
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/movieName"
@@ -39,7 +61,7 @@
             android:layout_height="wrap_content"
             android:text="Date"
             android:textSize="15dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:layout_gravity="left"
             android:textColor="@color/white"
             android:paddingLeft="20dp"/>
@@ -50,7 +72,7 @@
             android:layout_height="wrap_content"
             android:text="Seats"
             android:textSize="15dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:layout_gravity="left"
             android:textColor="@color/white"
             android:paddingLeft="20dp"/>
@@ -60,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:paddingLeft="20dp"
             android:text="No of seats"
             android:textColor="@color/white"
@@ -151,5 +173,7 @@
 
 
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

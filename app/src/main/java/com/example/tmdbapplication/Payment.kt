@@ -1,14 +1,23 @@
 package com.example.tmdbapplication
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.os.StrictMode
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.google.android.material.imageview.ShapeableImageView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.squareup.picasso.Picasso
+import org.json.JSONObject
+import java.net.URL
 
 class Payment : AppCompatActivity() {
 
+    lateinit var movieBanner:ShapeableImageView
     lateinit var movieName: TextView
     lateinit var bookedDate: TextView
     lateinit var seatNames: TextView
@@ -23,6 +32,10 @@ class Payment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
+
+        //remove 'android.os.NetworkOnMainThreadException' restriction and you override the default behavior
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
 
         movieName = findViewById(R.id.movieName)
         bookedDate = findViewById(R.id.date)
@@ -41,8 +54,13 @@ class Payment : AppCompatActivity() {
         var NOS = myintentReceive.getStringExtra("SelectedBookingDataNOS")
         var movieIdDate = "$mid"+bookDate.toString()
 
+
+
+        getMovieInfo(mid.toString())
+        movieName.text = id.toString()
         bookedDate.text = "Date : " + bookDate.toString()
-        seatNames.text = "Seats : " + seatArray.toString()
+        getSeatNumbers(seatArray.toString())
+        //seatNames.text = "Seats : " + seatArray.toString()
         noSeats.text = "No of Seats Booked : " + NOS.toString()
         if (NOS != null) {
             totalPrice.text = "RS." + calculatePrice(NOS.toInt()).toString()
@@ -67,6 +85,64 @@ class Payment : AppCompatActivity() {
         return 1500 * NOS
     }
 
+    fun getMovieInfo(mid:String){
+
+        movieBanner = findViewById(R.id.imgBanner)
+        movieName = findViewById(R.id.movieName)
+
+        var url =
+            "https://api.themoviedb.org/3/movie/${mid.toString()}?api_key=552d2cc1c293befeb2042aa156f6dcf1&language=en-US"
+        val resultJson = URL(url).readText()
+        val jsonObj = JSONObject(resultJson)
+
+        //accessing JSON tag
+        var backdrop_path = jsonObj.getString("backdrop_path")
+        var original_title = jsonObj.getString("original_title")
+
+        //publishing data
+        val uiHandler2 = Handler(Looper.getMainLooper())
+        uiHandler2.post(Runnable {
+            movieName.text = original_title.toString()
+        })
+
+
+        //using picasso
+        var iconUrl: String = "https://image.tmdb.org/t/p/original" + backdrop_path
+
+        val uiHandler = Handler(Looper.getMainLooper())
+        uiHandler.post(Runnable {
+            Picasso.get()
+                .load(iconUrl)
+                .into(movieBanner)
+        })
+
+    }
+
+    fun getSeatNumbers(seats:String){
+
+        var selectedSeats:String = ""
+
+        //---------------Row 1--------------------------------------------------------------------------------------------------
+        when (seats.contains("r1s1")) {
+
+            true -> {
+                selectedSeats = "R1 S1"
+            }
+
+            false -> {
+
+            }
+
+            else -> {
+                Toast.makeText(applicationContext, "HUH??", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+
+
+        seatNames.text = "Seats : " + selectedSeats
+    }
 
 }
 
