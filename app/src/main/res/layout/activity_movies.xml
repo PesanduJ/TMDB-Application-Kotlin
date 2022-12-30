@@ -127,13 +127,13 @@
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btm_navigation"
+        android:id="@+id/btm_navigationAdminDashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/round_corners"
         app:itemIconTint="@color/icons_color"
         app:itemRippleColor="@color/white"
-        app:menu="@menu/navigation_items">
+        app:menu="@menu/admin_navigation_items">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>

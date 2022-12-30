@@ -61,7 +61,7 @@ class Movies : AppCompatActivity() {
             LinearLayoutManager.HORIZONTAL, false
         )
 
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.btm_navigation)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.btm_navigationAdminDashboard)
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {

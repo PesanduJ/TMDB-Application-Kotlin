@@ -1,5 +1,6 @@
 package com.example.tmdbapplication
 
+import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
@@ -12,6 +13,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -22,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
@@ -78,8 +81,43 @@ class UserDashboard : AppCompatActivity() {
             startActivity(myintent)
         }
 
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.btm_navigationUserDashboard)
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> focusHome()
+
+                R.id.search -> focusSearch()
+
+                R.id.settings -> focusSettings()
+
+                R.id.location -> focusLocation()
+
+                else -> {}
+            }
+            true
+        }
 
 
+    }
+
+    fun focusHome(){
+
+    }
+
+    fun focusSearch(){
+        val sm :EditText= findViewById(R.id.txtUserSearchMovie)
+        sm.requestFocus()
+        val imm: InputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.showSoftInput(sm, InputMethodManager.SHOW_IMPLICIT)
+    }
+
+    fun focusSettings(){
+
+    }
+
+    fun focusLocation(){
 
     }
 //*******************************************************************************************************************
