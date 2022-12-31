@@ -1,5 +1,6 @@
 package com.example.tmdbapplication
 
+import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteConstraintException
 import android.database.sqlite.SQLiteException
@@ -11,16 +12,16 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.inputmethod.InputMethodManager
+import android.widget.*
 import androidx.appcompat.view.menu.ActionMenuItemView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.squareup.picasso.Picasso
 import org.json.JSONArray
 import org.json.JSONException
@@ -31,6 +32,8 @@ class Search : AppCompatActivity() {
     lateinit var searchedMovieRecycle: RecyclerView   //you are not even declaring them only referring when you are using them
     var searchedMovieData = JSONArray()
     lateinit var user:String
+
+    var genre:String=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +51,7 @@ class Search : AppCompatActivity() {
             applicationContext,
             LinearLayoutManager.VERTICAL, false
         )
+
 
     }
 
@@ -72,7 +76,11 @@ class Search : AppCompatActivity() {
                     searchedMovieData.getJSONObject(position).getString("release_date")
 
                 holder.movieId.text = searchedMovieData.getJSONObject(position).getString("id")
-
+                holder.imdb.text = searchedMovieData.getJSONObject(position).getString("vote_average")
+                var genreid = searchedMovieData.getJSONObject(position).getJSONArray("genre_ids").toString()
+                genreSelector(genreid.toString())
+                holder.genre.text = genre.toString()
+                genre = ""
                 var poster_path = searchedMovieData.getJSONObject(position).getString("poster_path")
                 var iconUrl: String = "https://image.tmdb.org/t/p/original" + poster_path
 
@@ -100,6 +108,8 @@ class Search : AppCompatActivity() {
         var releaseDate: TextView = itemView.findViewById(R.id.txtReleaseDateSearched)
         var movieThumb: ImageView = itemView.findViewById(R.id.imageViewSearched)
         var movieId: TextView = itemView.findViewById(R.id.txtIdSearched)
+        var imdb: TextView = itemView.findViewById(R.id.txtIMDB)
+        var genre: TextView = itemView.findViewById(R.id.txtGenreSearched)
     }
 
 
@@ -125,5 +135,217 @@ class Search : AppCompatActivity() {
         Volley.newRequestQueue(applicationContext).add(request)
     }
 
+    fun genreSelector(genderIDs:String){
+
+        when (genderIDs.contains("28")) {
+
+            true -> {
+                genre = "•Action "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("12")) {
+
+            true -> {
+                genre = genre + "•Adventure "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("16")) {
+
+            true -> {
+                genre = genre + "•Animation "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("35")) {
+
+            true -> {
+                genre = genre + "•Comedy "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("80")) {
+
+            true -> {
+                genre = genre + "•Crime "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("99")) {
+
+            true -> {
+                genre = genre + "•Documentary "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("18")) {
+
+            true -> {
+                genre = genre + "•Drama "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10751")) {
+
+            true -> {
+                genre = genre + "•Family "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("14")) {
+
+            true -> {
+                genre = genre + "•Fantasy "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("36")) {
+
+            true -> {
+                genre = genre + "•History "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("27")) {
+
+            true -> {
+                genre = genre + "•Horror "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10402")) {
+
+            true -> {
+                genre = genre + "•Music "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("9648")) {
+
+            true -> {
+                genre = genre + "•Mystery "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10749")) {
+
+            true -> {
+                genre = genre + "•Romance "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("878")) {
+
+            true -> {
+                genre = genre + "•Sci-Fi "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10770")) {
+
+            true -> {
+                genre = genre + "•TV Moive "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("53")) {
+
+            true -> {
+                genre = genre + "•Thriller "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10752")) {
+
+            true -> {
+                genre = genre + "•War "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("37")) {
+
+            true -> {
+                genre = genre + "•Western "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+    }
 
 }

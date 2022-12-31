@@ -28,6 +28,7 @@
             android:scrollbars="vertical"
             android:scrollHorizontally="true"
             android:text=""
+            android:fontFamily="@font/pt_sans"
             android:textAlignment="center"
             android:textColor="#B9656363" />
 
@@ -41,6 +42,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:text="Release Date"
+            android:fontFamily="@font/pt_sans"
             android:textSize="18dp"
             android:layout_marginBottom="20dp" />
 

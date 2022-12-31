@@ -31,167 +31,164 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="301dp">
+        android:orientation="vertical">
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@drawable/fade_bg"
-            tools:layout_editor_absoluteX="-85dp"
-            tools:layout_editor_absoluteY="-16dp">
+            android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="19dp"
-                android:layout_height="19dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="260dp"
-                android:layout_toEndOf="@+id/imgShadow"
-                android:background="@drawable/star"
-                android:scaleType="fitXY"
-                android:src="@drawable/star"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/txtRating"
-                android:layout_width="35dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="-20dp"
-                android:layout_toRightOf="@+id/imageButton2"
-                android:fontFamily="@font/pt_sans"
-                android:text=""
-                android:textColor="#BCB7BD"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/txtMovieTitle"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/imageButton2"
-                android:fontFamily="@font/pt_sans"
-                android:text="Dune"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:background="@drawable/fade_bg"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-85dp"
+                tools:layout_editor_absoluteY="-16dp">
 
-            <TextView
-                android:id="@+id/txtTimeGenreYear"
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/txtMovieTitle"
-                android:fontFamily="@font/pt_sans"
-                android:text="Time Genre Year"
-                android:textColor="#BCB7BD"
-                android:textSize="18dp" />
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="260dp"
+                    android:background="@drawable/star"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/star"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/txtDescription"
-                android:layout_width="355dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/txtTimeGenreYear"
-                android:fontFamily="@font/pt_sans"
-                android:scrollbars="vertical"
-                android:scrollHorizontally="true"
-                android:text="Description"
-                android:textColor="#BCB7BD"
-                android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/txtRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toRightOf="@+id/imageButton2"
+                    android:fontFamily="@font/pt_sans"
+                    android:text=""
+                    android:textColor="#BCB7BD"
+                    android:textSize="18dp" />
 
+                <TextView
+                    android:id="@+id/txtMovieTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pt_sans"
+                    android:text="Dune"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/txtTopcast"
-                android:layout_width="139dp"
-                android:layout_height="51dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/txtDescription"
-                android:fontFamily="@font/pt_sans"
-                android:text="Top Cast"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtTimeGenreYear"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pt_sans"
+                    android:text="Time Genre Year"
+                    android:textColor="#BCB7BD"
+                    android:textSize="18dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/castRecycler"
-                android:layout_width="355dp"
-                android:layout_height="160dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/txtMovieTitle" />
-
-            <TextView
-                android:id="@+id/txtSimilerMovies"
-                android:layout_width="220dp"
-                android:layout_height="51dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/castRecycler"
-                android:fontFamily="@font/pt_sans"
-                android:text="Similer Movies"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/similerRecycler"
-                android:layout_width="355dp"
-                android:layout_height="240dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/txtSimilerMovies" />
-
-            <Button
-                android:id="@+id/btn_addToShow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#D98639"
-                android:text="Add To Database"
-                app:shapeAppearanceOverlay="@style/RoundedSquare"
-                android:fontFamily="@font/pt_sans"/>
-
-            <TextView
-                android:id="@+id/idHide"
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/txtMovieTitle"
-                android:fontFamily="@font/droid_sans"
-                android:text="Time Genre Year"
-                android:textColor="#BCB7BD"
-                android:visibility="invisible"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/posterHide"
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/txtMovieTitle"
-                android:fontFamily="@font/droid_sans"
-                android:text="Time Genre Year"
-                android:textColor="#BCB7BD"
-                android:visibility="invisible"
-                android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="355dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/txtTimeGenreYear"
+                    android:fontFamily="@font/pt_sans"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="true"
+                    android:text="Description"
+                    android:textColor="#BCB7BD"
+                    android:textSize="18dp" />
 
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/txtTopcast"
+                    android:layout_width="139dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/txtDescription"
+                    android:fontFamily="@font/pt_sans"
+                    android:text="Top Cast"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-    </ScrollView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/castRecycler"
+                    android:layout_width="355dp"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/txtSimilerMovies"
+                    android:layout_width="220dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pt_sans"
+                    android:text="Similer Movies"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/similerRecycler"
+                    android:layout_width="355dp"
+                    android:layout_height="240dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <Button
+                    android:id="@+id/btn_addToShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#D98639"
+                    android:fontFamily="@font/pt_sans"
+                    android:text="Add To Database"
+                    app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+                <TextView
+                    android:id="@+id/idHide"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/droid_sans"
+                    android:text="Time Genre Year"
+                    android:textColor="#BCB7BD"
+                    android:textSize="18dp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/posterHide"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/droid_sans"
+                    android:text="Time Genre Year"
+                    android:textColor="#BCB7BD"
+                    android:textSize="18dp"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

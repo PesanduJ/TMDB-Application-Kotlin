@@ -11,7 +11,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.squareup.picasso.Picasso
@@ -80,4 +82,5 @@ class MyAdapterNS(private val movieList:ArrayList<Movie>) : RecyclerView.Adapter
         }
 
     }
+
 }

@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/imageButton2"
-            android:fontFamily="@font/alata"
+            android:fontFamily="@font/pt_sans"
             android:text="Dune"
             android:gravity="center"
             android:layout_gravity="center"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/txtMovieTitle"
-            android:fontFamily="@font/droid_sans"
+            android:fontFamily="@font/pt_sans"
             android:text="Time Genre Year"
             android:gravity="center"
             android:layout_gravity="center"
@@ -48,6 +48,7 @@
             android:layout_marginTop="10dp"
             android:backgroundTint="#D98639"
             android:text="Remove"
+            android:fontFamily="@font/pt_sans"
             app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
         <TextView

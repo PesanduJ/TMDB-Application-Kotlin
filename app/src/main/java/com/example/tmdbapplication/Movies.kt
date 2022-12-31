@@ -61,11 +61,12 @@ class Movies : AppCompatActivity() {
             LinearLayoutManager.HORIZONTAL, false
         )
 
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.btm_navigationAdminDashboard)
 
+        //bottom navigation bar
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.btm_navigationAdminDashboard)
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.home -> Toast.makeText(applicationContext, "home", Toast.LENGTH_SHORT).show()
+                R.id.home -> focusHome()
 
                 R.id.search -> focusSearch()
 
@@ -166,6 +167,11 @@ class Movies : AppCompatActivity() {
         Volley.newRequestQueue(applicationContext).add(request)
     }
 
+    fun focusHome(){
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+    }
+
     fun focusSearch(){
         val sm :EditText= findViewById(R.id.searchMovie)
         sm.requestFocus()
@@ -180,7 +186,8 @@ class Movies : AppCompatActivity() {
     }
 
     fun focusLocation(){
-
+        var myintent = Intent(applicationContext, Location::class.java)
+        startActivity(myintent)
     }
 
     private fun getMovieData() {

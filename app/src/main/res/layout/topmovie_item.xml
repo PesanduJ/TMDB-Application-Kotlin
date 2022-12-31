@@ -25,12 +25,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/imageButton2"
-            android:fontFamily="@font/alata"
             android:text="Dune"
+            android:fontFamily="@font/pt_sans"
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25dp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -54,13 +54,13 @@
 
             <TextView
                 android:id="@+id/txtIMDB"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toEndOf="@+id/txtMovieTitle"
-                android:fontFamily="@font/droid_sans"
                 android:text="Time Genre Year"
+                android:fontFamily="@font/pt_sans"
                 android:textColor="#BCB7BD"
                 android:textSize="18dp" />
         </LinearLayout>

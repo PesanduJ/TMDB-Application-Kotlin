@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp">
 
                 <TextView
@@ -33,6 +33,7 @@
                     android:layout_height="wrap_content"
                     android:text="Hello, John"
                     android:textSize="25dp"
+                    android:fontFamily="@font/pt_sans"
                     android:textColor="?android:attr/windowBackground"/>
 
                 <TextView
@@ -40,6 +41,7 @@
                     android:layout_height="wrap_content"
                     android:text="There are so many movies showing now"
                     android:textSize="13dp"
+                    android:fontFamily="@font/pt_sans"
                     android:textColor="?android:attr/windowBackground"/>
             </LinearLayout>
 
@@ -48,7 +50,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="60dp"
+                android:layout_marginLeft="80dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/user_profile_icon"
@@ -78,6 +80,7 @@
                 android:paddingLeft="30dp"
                 android:textColor="@color/white"
                 android:textColorHint="#B7B6B6"
+                android:fontFamily="@font/pt_sans"
                 android:textSize="15dp" />
 
             <Button
@@ -107,32 +110,37 @@
                     android:layout_height="wrap_content"
                     android:text="Now Premiering"
                     android:textSize="25dp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="center"
+                    android:fontFamily="@font/pt_sans"
+                    android:textColor="#BCB7BD"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/userNowPremieringRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="800dp"
+                    android:layout_height="630dp"
                     android:layout_above="@+id/btm_navigation"
-                    android:layout_marginTop="15dp" />
+                    android:layout_marginTop="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Top Movies"
                     android:textSize="25dp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"/>
+                    android:textColor="#BCB7BD"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/pt_sans"
+                    android:layout_marginTop="10dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/userTopMoviesRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="800dp"
+                    android:layout_height="500dp"
                     android:layout_above="@+id/btm_navigation"
-                    android:layout_marginTop="15dp" />
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="55dp"/>
             </LinearLayout>
         </ScrollView>
 

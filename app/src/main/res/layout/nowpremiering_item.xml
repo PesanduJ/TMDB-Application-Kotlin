@@ -27,11 +27,11 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_toEndOf="@+id/imageButton2"
-            android:fontFamily="@font/alata"
+            android:fontFamily="@font/pt_sans"
             android:paddingLeft="10dp"
             android:text="Pocahontal II: Journey to a New World"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25dp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -60,7 +60,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/txtMovieTitle"
-                android:fontFamily="@font/droid_sans"
+                android:fontFamily="@font/pt_sans"
                 android:text="Time Genre Year"
                 android:textColor="#BCB7BD"
                 android:textSize="18dp" />
@@ -72,7 +72,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/txtMovieTitle"
-                android:fontFamily="@font/droid_sans"
+                android:fontFamily="@font/pt_sans"
                 android:text="Time Genre Year"
                 android:textColor="#BCB7BD"
                 android:textSize="18dp" />
@@ -83,8 +83,8 @@
 
         <TextView
             android:id="@+id/txtIdNotVisibleNP"
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/txtMovieTitle"
             android:fontFamily="@font/droid_sans"
@@ -98,7 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/pt_sans"
             android:backgroundTint="#FE7829"
             android:text="Book Tickets"
             app:shapeAppearanceOverlay="@style/RoundedSquare" />

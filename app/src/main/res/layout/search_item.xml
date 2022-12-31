@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -32,7 +33,19 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:text="Movie Name"
-                android:textColor="@color/white"
+                android:fontFamily="@font/pt_sans"
+                android:textColor="#BCB7BD"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtGenreSearched"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Genre"
+                android:fontFamily="@font/pt_sans"
+                android:textColor="#BCB7BD"
                 android:textSize="18dp" />
 
             <TextView
@@ -42,8 +55,39 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:text="Release Date"
-                android:textColor="@color/white"
+                android:fontFamily="@font/pt_sans"
+                android:textColor="#BCB7BD"
                 android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/star"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_toEndOf="@+id/imgShadow"
+                    android:background="@drawable/star"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/star"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/txtIMDB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@+id/txtMovieTitle"
+                    android:text="Time Genre Year"
+                    android:fontFamily="@font/pt_sans"
+                    android:textColor="#BCB7BD"
+                    android:textSize="18dp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/txtIdSearched"

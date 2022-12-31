@@ -52,6 +52,7 @@
                 android:layout_marginTop="25dp"
                 android:paddingLeft="20dp"
                 android:text="Bat man"
+                android:fontFamily="@font/pt_sans"
                 android:textColor="@color/white"
                 android:textSize="25dp" />
 
@@ -63,6 +64,7 @@
                 android:layout_marginTop="15dp"
                 android:paddingLeft="20dp"
                 android:text="Date"
+                android:fontFamily="@font/pt_sans"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
 
@@ -74,6 +76,7 @@
                 android:layout_marginTop="15dp"
                 android:paddingLeft="20dp"
                 android:text="Seats"
+                android:fontFamily="@font/pt_sans"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
 
@@ -86,6 +89,7 @@
                 android:paddingLeft="20dp"
                 android:text="No of seats"
                 android:textColor="@color/white"
+                android:fontFamily="@font/pt_sans"
                 android:textSize="15dp" />
 
             <TextView
@@ -96,7 +100,8 @@
                 android:layout_marginTop="25dp"
                 android:text="Price"
                 android:textColor="@color/white"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:fontFamily="@font/pt_sans"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -132,6 +137,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_weight="1"
                             android:text="Razorpay"
+                            android:fontFamily="@font/pt_sans"
                             android:textColor="#FFFEFE" />
 
                         <RadioButton
@@ -143,6 +149,7 @@
                             android:layout_marginLeft="30dp"
                             android:layout_marginRight="30dp"
                             android:text="Google Pay"
+                            android:fontFamily="@font/pt_sans"
                             android:textColor="#FFFEFE" />
 
                         <RadioButton
@@ -152,6 +159,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_weight="1"
                             android:text="Paypal"
+                            android:fontFamily="@font/pt_sans"
                             android:textColor="#FFFEFE" />
 
                     </RadioGroup>
@@ -171,6 +179,7 @@
                 android:layout_marginRight="10dp"
                 android:backgroundTint="#FE7829"
                 android:text="Pay Now"
+                android:fontFamily="@font/pt_sans"
                 app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
 
