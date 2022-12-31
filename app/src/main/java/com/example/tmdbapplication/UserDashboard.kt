@@ -102,7 +102,8 @@ class UserDashboard : AppCompatActivity() {
     }
 
     fun focusHome(){
-
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
     }
 
     fun focusSearch(){
@@ -114,11 +115,13 @@ class UserDashboard : AppCompatActivity() {
     }
 
     fun focusSettings(){
-
+        var myintent = Intent(applicationContext, Settings::class.java)
+        startActivity(myintent)
     }
 
     fun focusLocation(){
-
+        var myintent = Intent(applicationContext, Location::class.java)
+        startActivity(myintent)
     }
 //*******************************************************************************************************************
     private inner class UserTopMoviesAdapter: RecyclerView.Adapter<UserTopMoviesViewHolder>(){

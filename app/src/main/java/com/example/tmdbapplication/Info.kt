@@ -43,6 +43,7 @@ class Info : AppCompatActivity() {
 
     lateinit var similerMovieRecycle: RecyclerView
     var similerMovieData = JSONArray()
+    var genre:String=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,14 +62,6 @@ class Info : AppCompatActivity() {
             btn_addtoshow.isVisible=false
         }
 
-
-//        //overriding default back button to go to main menu
-//        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
-//            override fun handleOnBackPressed() {
-//                startActivity(Intent(applicationContext, Movies::class.java))
-//            }
-//        })
-
         Thread(Runnable {
 
             this@Info.runOnUiThread(java.lang.Runnable {
@@ -76,13 +69,7 @@ class Info : AppCompatActivity() {
             })
         }).start()
 
-//        lifecycleScope.launchWhenCreated {
-//            withContext(Dispatchers.IO) {
-//                getMovieInfo(mid.toString())
-//            }
-//        }
 
-        //do this
         castRecycle = findViewById(R.id.castRecycler)
         castRecycle.adapter = CastAdapter()
         castRecycle.layoutManager = LinearLayoutManager(
@@ -156,12 +143,15 @@ class Info : AppCompatActivity() {
         var idHide = jsonObj.getString("id")
         var posterHide = jsonObj.getString("poster_path")
 
+        var genreids =jsonObj.getJSONArray("genres").toString()
+        genreSelector(genreids.toString())
+
 
         //publishing data
         val uiHandler2 = Handler(Looper.getMainLooper())
         uiHandler2.post(Runnable {
             txtMovieTitle.text = original_title
-            txtRating.text = rating.toString().take(3)
+            txtRating.text = rating.toString().take(3) + "   "+genre.toString()
             txtTimeGenreYear.text = "•" + convertTime(runtime) + "  •" + release_date.take(4)
             txtDescription.text = overview
             idHideText.text = idHide
@@ -347,6 +337,219 @@ Creating Adapters and ViewHolders for displaying cast
             })
 
         Volley.newRequestQueue(applicationContext).add(request)
+
+    }
+
+    fun genreSelector(genderIDs:String){
+
+        when (genderIDs.contains("28")) {
+
+            true -> {
+                genre = "•Action "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("12")) {
+
+            true -> {
+                genre = genre + "•Adventure "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("16")) {
+
+            true -> {
+                genre = genre + "•Animation "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("35")) {
+
+            true -> {
+                genre = genre + "•Comedy "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("80")) {
+
+            true -> {
+                genre = genre + "•Crime "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("99")) {
+
+            true -> {
+                genre = genre + "•Documentary "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("18")) {
+
+            true -> {
+                genre = genre + "•Drama "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10751")) {
+
+            true -> {
+                genre = genre + "•Family "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("14")) {
+
+            true -> {
+                genre = genre + "•Fantasy "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("36")) {
+
+            true -> {
+                genre = genre + "•History "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("27")) {
+
+            true -> {
+                genre = genre + "•Horror "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10402")) {
+
+            true -> {
+                genre = genre + "•Music "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("9648")) {
+
+            true -> {
+                genre = genre + "•Mystery "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10749")) {
+
+            true -> {
+                genre = genre + "•Romance "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("878")) {
+
+            true -> {
+                genre = genre + "•Sci-Fi "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10770")) {
+
+            true -> {
+                genre = genre + "•TV Moive "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("53")) {
+
+            true -> {
+                genre = genre + "•Thriller "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("10752")) {
+
+            true -> {
+                genre = genre + "•War "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
+
+        when (genderIDs.contains("37")) {
+
+            true -> {
+                genre = genre + "•Western "
+            }
+
+            false -> {}
+
+            else -> {}
+        }
 
     }
 

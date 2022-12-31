@@ -36,6 +36,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:text="Movie Name"
+                android:fontFamily="@font/pt_sans"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
 
@@ -47,6 +48,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:text="Release Date"
+                android:fontFamily="@font/pt_sans"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
 

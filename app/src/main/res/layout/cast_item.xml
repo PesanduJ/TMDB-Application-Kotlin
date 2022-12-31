@@ -24,6 +24,7 @@
             android:layout_height="50dp"
             android:scrollHorizontally="true"
             android:text=""
+            android:fontFamily="@font/pt_sans"
             android:textAlignment="center"
             android:textColor="#B9656363" />
 

@@ -25,7 +25,7 @@
                 android:layout_marginTop="75dp"
                 android:fontFamily="@font/pt_sans"
                 android:text="Book My Show"
-                android:textColor="#B9FFFFFF"
+                android:textColor="#BCB7BD"
                 android:textSize="45dp"
                 android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/pt_sans"
                     android:text="Sign In"
-                    android:textColor="#B9FFFFFF"
+                    android:textColor="#BCB7BD"
                     android:textSize="35dp" />
 
                 <EditText
