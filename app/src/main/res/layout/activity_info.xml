@@ -65,7 +65,7 @@
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="-20dp"
                 android:layout_toRightOf="@+id/imageButton2"
-                android:fontFamily="@font/droid_sans"
+                android:fontFamily="@font/pt_sans"
                 android:text=""
                 android:textColor="#BCB7BD"
                 android:textSize="18dp" />
@@ -77,7 +77,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/imageButton2"
-                android:fontFamily="@font/alata"
+                android:fontFamily="@font/pt_sans"
                 android:text="Dune"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
@@ -90,7 +90,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/txtMovieTitle"
-                android:fontFamily="@font/droid_sans"
+                android:fontFamily="@font/pt_sans"
                 android:text="Time Genre Year"
                 android:textColor="#BCB7BD"
                 android:textSize="18dp" />
@@ -102,7 +102,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/txtTimeGenreYear"
-                android:fontFamily="@font/droid_sans"
+                android:fontFamily="@font/pt_sans"
                 android:scrollbars="vertical"
                 android:scrollHorizontally="true"
                 android:text="Description"
@@ -117,7 +117,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_toEndOf="@+id/txtDescription"
-                android:fontFamily="@font/actor"
+                android:fontFamily="@font/pt_sans"
                 android:text="Top Cast"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
@@ -138,7 +138,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/castRecycler"
-                android:fontFamily="@font/actor"
+                android:fontFamily="@font/pt_sans"
                 android:text="Similer Movies"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
@@ -160,7 +160,8 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#D98639"
                 android:text="Add To Database"
-                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+                app:shapeAppearanceOverlay="@style/RoundedSquare"
+                android:fontFamily="@font/pt_sans"/>
 
             <TextView
                 android:id="@+id/idHide"

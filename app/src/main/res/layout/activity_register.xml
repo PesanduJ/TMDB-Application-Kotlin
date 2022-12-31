@@ -23,10 +23,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text ="Book My Show"
-                android:textColor="#72FFFFFF"
+                android:textColor="#B9FFFFFF"
                 android:textSize="45dp"
+                android:fontFamily="@font/pt_sans"
                 android:layout_marginTop="75dp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -47,6 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign up"
+                    android:fontFamily="@font/pt_sans"
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/white"
                     android:layout_marginTop="10dp"
@@ -90,7 +93,8 @@
                         android:paddingLeft="30dp"
                         android:textColor="@color/white"
                         android:textColorHint="#4DB7B6B6"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:fontFamily="@font/pt_sans"/>
 
                     <EditText
                         android:id="@+id/userRegisterLastName"
@@ -109,7 +113,8 @@
                         android:paddingLeft="30dp"
                         android:textColor="@color/white"
                         android:textColorHint="#4DB7B6B6"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:fontFamily="@font/pt_sans"/>
 
                 </LinearLayout>
 
@@ -128,7 +133,8 @@
                     android:paddingLeft="30dp"
                     android:textColor="@color/white"
                     android:textColorHint="#4DB7B6B6"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:fontFamily="@font/pt_sans"/>
 
                 <EditText
                     android:id="@+id/userRegisterEmail"
@@ -146,7 +152,8 @@
                     android:paddingLeft="30dp"
                     android:textColor="@color/white"
                     android:textColorHint="#4DB7B6B6"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:fontFamily="@font/pt_sans"/>
 
                 <EditText
                     android:id="@+id/userRegisterPhoneNo"
@@ -164,7 +171,8 @@
                     android:paddingLeft="30dp"
                     android:textColor="@color/white"
                     android:textColorHint="#4DB7B6B6"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:fontFamily="@font/pt_sans"/>
 
                 <EditText
                     android:id="@+id/userRegisterPassword"
@@ -182,7 +190,8 @@
                     android:paddingLeft="30dp"
                     android:textColor="@color/white"
                     android:textColorHint="#4DB7B6B6"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:fontFamily="@font/pt_sans"/>
 
                 <EditText
                     android:id="@+id/userRegisterConfirmPassword"
@@ -200,7 +209,8 @@
                     android:paddingLeft="30dp"
                     android:textColor="@color/white"
                     android:textColorHint="#4DB7B6B6"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:fontFamily="@font/pt_sans"/>
 
                 <Button
                     android:id="@+id/registerUser"
@@ -213,7 +223,8 @@
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="#FE7829"
                     android:text="Register"
-                    app:shapeAppearanceOverlay="@style/RoundedSquare" />
+                    app:shapeAppearanceOverlay="@style/RoundedSquare"
+                    android:fontFamily="@font/pt_sans"/>
 
 
 

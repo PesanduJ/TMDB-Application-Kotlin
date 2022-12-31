@@ -4,6 +4,21 @@
         <item>@font/abril_fatface</item>
         <item>@font/actor</item>
         <item>@font/alata</item>
+        <item>@font/cairo_semibold</item>
+        <item>@font/capriola</item>
         <item>@font/droid_sans</item>
+        <item>@font/fira_code</item>
+        <item>@font/fira_code_medium</item>
+        <item>@font/fira_code_semibold</item>
+        <item>@font/fira_mono</item>
+        <item>@font/fira_sans_extra_condensed</item>
+        <item>@font/fira_sans_extra_condensed_extrabold</item>
+        <item>@font/fira_sans_extra_condensed_medium</item>
+        <item>@font/fira_sans_extra_condensed_semibold</item>
+        <item>@font/monda</item>
+        <item>@font/poppins</item>
+        <item>@font/poppins_semibold</item>
+        <item>@font/pt_sans</item>
+        <item>@font/roboto_condensed_regular</item>
     </array>
 </resources>

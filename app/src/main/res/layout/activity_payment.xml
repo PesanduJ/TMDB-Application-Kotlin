@@ -14,165 +14,167 @@
         tools:layout_editor_absoluteX="232dp"
         tools:layout_editor_absoluteY="301dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/fade_bg"
-        android:orientation="vertical">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgBanner"
-                android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/testbg" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgShadow"
-                android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:background="@drawable/shadow_effect" />
-
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/movieName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bat man"
-            android:textSize="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="left"
-            android:textColor="@color/white"
-            android:paddingLeft="20dp"/>
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:textSize="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="left"
-            android:textColor="@color/white"
-            android:paddingLeft="20dp"/>
-
-        <TextView
-            android:id="@+id/seatNames"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seats"
-            android:textSize="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="left"
-            android:textColor="@color/white"
-            android:paddingLeft="20dp"/>
-
-        <TextView
-            android:id="@+id/noOfSeats"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="20dp"
-            android:text="No of seats"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/payAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:textSize="25dp"
-            android:textColor="@color/white"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:src="@drawable/tear_line" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/fade_bg"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/testbg" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:background="@drawable/shadow_effect" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/movieName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="25dp"
+                android:paddingLeft="20dp"
+                android:text="Bat man"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:text="Date"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/seatNames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:text="Seats"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/noOfSeats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:text="No of seats"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/payAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical">
+                android:layout_marginTop="25dp"
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tear_line" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-            <ToggleButton
-                android:id="@+id/razorPay"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textColor="#FFFEFE"
-                android:hint="Razorpay"
-                android:textOff=""
-                android:textOn="•"
-                android:layout_marginTop="15dp"
-                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
-            <ToggleButton
-                android:id="@+id/googlePay"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textColor="#FFFEFE"
-                android:hint="Google Pay"
-                android:textOff=""
-                android:textOn="•"
-                android:layout_marginTop="15dp"
-                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-            <ToggleButton
-                android:id="@+id/paypal"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textColor="#FFFEFE"
-                android:hint="Paypal"
-                android:textOff=""
-                android:textOn="•"
-                android:layout_marginTop="15dp"
-                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/razorPay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:text="Razorpay"
+                            android:textColor="#FFFEFE" />
 
+                        <RadioButton
+                            android:id="@+id/googlePay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:text="Google Pay"
+                            android:textColor="#FFFEFE" />
+
+                        <RadioButton
+                            android:id="@+id/paypal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:text="Paypal"
+                            android:textColor="#FFFEFE" />
+
+                    </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
-            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#FE7829"
+                android:text="Pay Now"
+                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+
         </LinearLayout>
-
-
-
-        <Button
-            android:id="@+id/btn_pay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="#FE7829"
-            android:text="Pay Now"
-            app:shapeAppearanceOverlay="@style/RoundedSquare" />
-
-
-    </LinearLayout>
 
     </ScrollView>
 

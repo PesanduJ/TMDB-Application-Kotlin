@@ -23,9 +23,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="75dp"
+                android:fontFamily="@font/pt_sans"
                 android:text="Book My Show"
-                android:textColor="#72FFFFFF"
-                android:textSize="45dp" />
+                android:textColor="#B9FFFFFF"
+                android:textSize="45dp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -47,12 +49,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/pt_sans"
                     android:text="Sign In"
-                    android:textColor="@color/white"
+                    android:textColor="#B9FFFFFF"
                     android:textSize="35dp" />
 
                 <EditText
                     android:id="@+id/userEmail"
+                    android:fontFamily="@font/pt_sans"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
@@ -71,6 +75,7 @@
 
                 <EditText
                     android:id="@+id/userPassword"
+                    android:fontFamily="@font/pt_sans"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
@@ -91,6 +96,7 @@
                     android:id="@+id/cb_remember"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/pt_sans"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
@@ -108,6 +114,7 @@
                     <Button
                         android:id="@+id/login"
                         android:layout_width="150dp"
+                        android:fontFamily="@font/pt_sans"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
@@ -119,6 +126,7 @@
                     <Button
                         android:id="@+id/register"
                         android:layout_width="150dp"
+                        android:fontFamily="@font/pt_sans"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
