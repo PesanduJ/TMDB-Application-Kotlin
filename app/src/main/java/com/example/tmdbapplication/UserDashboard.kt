@@ -2,10 +2,8 @@ package com.example.tmdbapplication
 
 import android.content.Context
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,11 +12,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -33,7 +28,6 @@ import com.squareup.picasso.Picasso
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
-import org.w3c.dom.Text
 import java.io.File
 
 class UserDashboard : AppCompatActivity() {
@@ -98,12 +92,21 @@ class UserDashboard : AppCompatActivity() {
             true
         }
 
+        var btnLogout = findViewById<Button>(R.id.logout)
+        btnLogout.setOnClickListener(){
+            var helper = MyDBHelper(applicationContext)
+            var db = helper.readableDatabase
+            db.delete("UserData",null,null)
 
+            var loginIntent = Intent(applicationContext,Login::class.java)
+            startActivity(loginIntent)
+        }
     }
 
     fun focusHome(){
-        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+        val intent = intent
+        finish()
+        startActivity(intent)
     }
 
     fun focusSearch(){
@@ -115,7 +118,12 @@ class UserDashboard : AppCompatActivity() {
     }
 
     fun focusSettings(){
+
+        var userDetailsIntent = intent
+        var id = userDetailsIntent.getStringExtra("UserID")
+
         var myintent = Intent(applicationContext, Settings::class.java)
+        myintent.putExtra("nic",id)
         startActivity(myintent)
     }
 

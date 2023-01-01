@@ -1,5 +1,6 @@
 package com.example.tmdbapplication
 
+import android.content.ContentValues
 import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
@@ -35,7 +36,7 @@ class Login : AppCompatActivity() {
         cbRemember = findViewById(R.id.cb_remember)
 
 
-        //checkSQLiteForCredentials()
+        checkSQLiteForCredentials()
 
         login.setOnClickListener() {
 
@@ -122,34 +123,41 @@ class Login : AppCompatActivity() {
         phoneNo: String,
         password: String
     ) {
-        SQLiteDB = openOrCreateDatabase("UserDB", MODE_PRIVATE, null)
-        SQLiteDB.execSQL("CREATE TABLE IF NOT EXISTS UserData(firstName varchar(100),lastName varchar(100),nic varchar(100),email varchar(100),phoneNo varchar(100),password varchar(100))")
-        SQLiteDB.execSQL("INSERT INTO UserData VALUES('"+firstName+"','"+lastName+"','"+nic+"','"+email+"','"+phoneNo+"','"+password+"')")
+
+
+        var helper = MyDBHelper(applicationContext)
+        var db = helper.readableDatabase
+
+        var cv = ContentValues()
+        cv.put("firstName",firstName)
+        cv.put("lastName",lastName)
+        cv.put("nic",nic)
+        cv.put("email",email)
+        cv.put("phoneNo",phoneNo)
+        cv.put("password",password)
+
+        db.insert("UserData",null,cv)
+
+
     }
 
     fun checkSQLiteForCredentials() {
 
         userEmail = findViewById(R.id.userEmail)
         userPassword = findViewById(R.id.userPassword)
-        lateinit var myCursor: Cursor
 
-//        SQLiteDB = openOrCreateDatabase("UserDB", MODE_PRIVATE, null)
-//        SQLiteDB.execSQL("CREATE TABLE IF NOT EXISTS UserData(firstName varchar(100),lastName varchar(100),nic varchar(100),email varchar(100),phoneNo varchar(100),password varchar(100))")
 
-        myCursor = SQLiteDB.rawQuery("SELECT * FROM UserData", null)
+        var helper = MyDBHelper(applicationContext)
+        var db = helper.readableDatabase
+        var rs = db.rawQuery("SELECT * FROM UserData", null)
 
-        if(myCursor.position == -1){
+        if (rs.moveToLast()){
+            var email = rs.getString(3)
+            var pw = rs.getString(5)
 
+            userEmail.setText("$email")
+            userPassword.setText("$pw")
         }
-        else{
-            myCursor.moveToFirst()
-            userEmail.setText("${myCursor.getString(3)}")
-            userPassword.setText("${myCursor.getString(5)}")
-        }
-
-
-
-
 
 
     }

@@ -68,7 +68,9 @@
                     android:adjustViewBounds="true"
                     android:onClick="pickPhoto"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/user_profile_icon" />
+                    android:src="@drawable/user_profile_icon"
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    app:strokeWidth="3dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"

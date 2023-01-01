@@ -1,9 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings">
+    tools:context=".Settings"
+    android:background="@drawable/fade_bg"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_calen">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:fontFamily="@font/pt_sans"
+            android:layout_marginLeft="10dp"
+            android:textColor="#BCB7BD"
+            android:layout_marginTop="10dp"
+            android:textSize="35dp"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/white"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/updateUserPic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:onClick="pickUserPhoto"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_profile_icon"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:strokeWidth="3dp" />
+
+        <EditText
+            android:id="@+id/updateUserFirstName"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_bg"
+            android:foreground="@drawable/ic_baseline_person_24"
+            android:foregroundGravity="left|center"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="#4DB7B6B6"
+            android:textSize="20dp"
+            android:fontFamily="@font/pt_sans"/>
+
+        <EditText
+            android:id="@+id/updateUserLastName"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_bg"
+            android:foreground="@drawable/ic_baseline_person_24"
+            android:foregroundGravity="left|center"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="#4DB7B6B6"
+            android:textSize="20dp"
+            android:fontFamily="@font/pt_sans"/>
+
+        <EditText
+            android:id="@+id/updateUserEmail"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edittext_bg"
+            android:foreground="@drawable/ic_baseline_email_24"
+            android:foregroundGravity="left|center"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="#4DB7B6B6"
+            android:textSize="20dp"
+            android:fontFamily="@font/pt_sans"/>
+
+        <EditText
+            android:id="@+id/updateUserPhoneNo"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edittext_bg"
+            android:foreground="@drawable/ic_baseline_phone_iphone_24"
+            android:foregroundGravity="left|center"
+            android:hint="Phone Number"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="#4DB7B6B6"
+            android:textSize="20dp"
+            android:fontFamily="@font/pt_sans"/>
+
+        <Button
+            android:id="@+id/updateUser"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FE7829"
+            android:text="Edit Information"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            android:fontFamily="@font/pt_sans"/>
+
+    </LinearLayout>
+
+</LinearLayout>
